@@ -46,7 +46,7 @@
 
 .friend__content .friend__status,
 .friend .chat__timestamp {
-  font-size: 12px;
+  font-size: 14px;
 }
 
 .friends__friend .friend__avatar {
@@ -58,6 +58,7 @@
   border-radius: 15px;
   border: 1px solid #52e084;
   font-size: 14px;
+  white-space: nowrap;
 }
 
 .friend__now-listening span {

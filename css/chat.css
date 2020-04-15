@@ -1,0 +1,110 @@
+.chat .chat__messages{
+  display: flex;
+  flex-direction: column;
+}
+
+.chat .chat__timestamp{
+  font-size: 14px;
+  color: white;
+  background-color: grey;
+  text-align: center;
+  width: 70%;
+  box-shadow: 5px 2px 5px black;
+  margin: 0 15%;
+  margin-bottom: 15px;
+  padding: 5px 0;
+  border-radius: 10px;
+}
+
+.chat .message{
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 15px;
+}
+
+.incoming-message .message__content{
+  margin-left: 10px;
+}
+
+.chat .message__bubble{
+  border: 1px solid black;
+  width: 50vw;
+  margin: 5px 0;
+  padding: 10px;
+  box-shadow: 5px 2px 5px black;
+  border-radius: 10px;
+}
+
+.chat .outgoing-message{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.incoming-message .message__bubble{
+  border-bottom-left-radius: 0;
+}
+
+.outgoing-message .message__bubble{
+  border-bottom-right-radius: 0;
+}
+
+.chat__write{
+  background-color: skyblue;
+  font-size: 18px;
+  width: 92vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  bottom: 5px;
+  left: 4vw;
+  padding: 5px 10px;
+  border-radius: 10px;
+}
+
+.chat__write .chat__write-column:nth-child(1){
+  position: absolute;
+  left: 30px;
+  bottom: 3px;
+}
+
+.chat__write input{
+  width: 80vw;
+}
+
+.chat__write input:focus {
+  transform: scale(1.2);
+}
+
+@keyframes incomingMessage_pop {
+  from{
+    transform: translateX(-30px);
+  }
+  to{
+    transform: none;
+  }
+}
+
+.chat .incoming-message{
+  animation-name: incomingMessage_pop;
+  animation-duration: 0.5s;
+}
+
+@keyframes outgoingMessage_pop {
+  from{
+    transform: translateX(50px);
+  }
+  to{
+    transform: none;
+  }
+}
+
+.chat .outgoing-message{
+  animation-name: outgoingMessage_pop;
+  animation-duration: 0.5s;
+}
+
+.chat img{
+  width: 60px;
+  height: 60px;
+}
